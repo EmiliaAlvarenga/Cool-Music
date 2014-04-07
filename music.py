@@ -15,10 +15,12 @@ respuesta=requests.get('http://api.deezer.com/search?q=%s'% cantante)
 datos=respuesta.text.encode('utf-8')
 dicc_api=json.loads(datos)
 raiz=dicc_api["data"]
-#for i in raiz:
-ident=raiz[1]["album"]["title"] ##Esto funciona, pero como poner el titulo de album de cada uno de los objeto de la lista data?? 
-#identificador_artista.append(ident)
-#link=dicc_api["link"]
-print ident 
-fichero.write(ident)
-#print link
+for i in raiz:
+	titulo=i["title"]
+	id_album=i["album"]["id"]  
+	enlace=i["link"]
+	print titulo
+	print id_album
+	print enlace  
+	fichero.write(titulo)
+	fichero.write(enlace)
