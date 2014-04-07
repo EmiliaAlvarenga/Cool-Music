@@ -16,11 +16,11 @@ datos=respuesta.text.encode('utf-8')
 dicc_api=json.loads(datos)
 raiz=dicc_api["data"]
 for i in raiz:
-	titulo=i["title"]
-	id_album=i["album"]["id"]  
-	enlace=i["link"]
-	print titulo
-	print id_album
-	print enlace  
-	fichero.write(titulo)
-	fichero.write(enlace)
+    titulo=i["title"]
+    id_album=i["album"]["id"]  
+    enlace=i["link"]
+    print titulo
+    print id_album
+    print enlace  
+    fichero.write(titulo)
+    fichero.write(enlace)
