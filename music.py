@@ -21,17 +21,17 @@ def search():
 	
 @post('/search')
 def nombre():
-	global artista
-	title=[]
-	artista = request.forms.get('artista')
-	respuesta=requests.get('http://api.deezer.com/search?q=%s'% artista)
-	datos=respuesta.text.encode('utf-8')
-	dicc_api=json.loads(datos)
-	raiz=dicc_api["data"]
-	for i in raiz:
-		tlista=i["title"]
-		title.append(tlista)
-		return template('index', artista=artista, title=title)
+    global artista
+    title=[]
+    artista = request.forms.get('artista')
+    respuesta=requests.get('http://api.deezer.com/search?q=%s'% artista)
+    datos=respuesta.text.encode('utf-8')
+    dicc_api=json.loads(datos)
+    raiz=dicc_api["data"]
+    for i in raiz:
+	tlista=i["title"]
+	title.append(tlista)
+	return template('index', artista=artista, title=title)
 
  
 run(host='localhost', port=8080, debug=True, reloader=True)
