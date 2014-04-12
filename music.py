@@ -6,10 +6,13 @@ import requests
 from bottle import route, get, post, run, template, debug, error
 import bottle 
 
+
+#por si escribo mal una direccion
 @error(404)
 def error404(error):
     return 'Nada que mostrar aqui'
-	
+
+#Pedimos el nombre del artista para usarlo como parametro el la peticion	
 @get('/search')
 def search():
     return '''
@@ -18,7 +21,8 @@ def search():
             <input value="Search" type="submit" />
         </form>
     '''
-	
+
+#¿como capturar el nombre del artista para pasarla al template?
 @post('/search')
 def nombre():
     global artista
