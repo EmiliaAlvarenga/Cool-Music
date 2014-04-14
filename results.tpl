@@ -9,6 +9,6 @@
             <ul>
 	        <li>{{ title }}</li>
             </ul>
-            <a href="/home">Homepage</a> 	
+        <a href="/home">Homepage</a> 	
     </body>
 </html>
