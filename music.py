@@ -36,7 +36,7 @@ def nombre():
     for i in raiz:
         tlista=i["title"]
 	title.append(tlista)
-        return template('results', title=title)
+        return template('results',artist=artista, title=title)
 
 debug(True)
 run(host='localhost', port=8080, reloader=True)
