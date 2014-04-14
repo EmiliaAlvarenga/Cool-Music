@@ -5,10 +5,10 @@
     </head>
     <body>
         <h1>{{ artist }}</h1>
-	      %for i in title:
-		        <ul>
-			          <li>{{ title }}</li>
-		        </ul>
-        <a href="/home">Homepage</a> 	
+        %for i in title:
+            <ul>
+	        <li>{{ title }}</li>
+            </ul>
+            <a href="/home">Homepage</a> 	
     </body>
 </html>
