@@ -3,7 +3,7 @@
 
 import json
 import requests
-from bottle import route, get, post, run, template, debug, error
+from bottle import route, get, post, run, template, debug, error, request
 import bottle 
 
 
@@ -12,30 +12,34 @@ import bottle
 def error404(error):
     return 'Nada que mostrar aqui'
 
-#Pedimos el nombre del artista para usarlo como parametro el la peticion	
-@get('/search')
+@route('/home')
 def search():
-    return '''
-        <form action="/search" method="post">
-            Artista: <input name="artista" type="text" />
-            <input value="Search" type="submit" />
-        </form>
-    '''
+    return template('index')
 
-#¿como capturar el nombre del artista para pasarla al template?
-@post('/search')
+    
+#Pedimos desde template el nombre del artista para usarlo como parametro el la peticion	
+@route('/artist')
+def search_name():
+	return template('artist')   
+    
+#¿como pasar los datos al template?
+		
+@post('/info')
 def nombre():
-    global artista
-    title=[]
-    artista = request.forms.get('artista')
-    respuesta=requests.get('http://api.deezer.com/search?q=%s'% artista)
-    datos=respuesta.text.encode('utf-8')
-    dicc_api=json.loads(datos)
-    raiz=dicc_api["data"]
-    for i in raiz:
-	tlista=i["title"]
-	title.append(tlista)
-	return template('index', artista=artista, title=title)
+	global artist
+	artista = request.forms.get("artista")
+	respuesta = requests.get('http://api.deezer.com/search?q=%s'% artista)
+	datos=respuesta.text.encode('utf-8')
+	dicc_api=json.loads(datos)
+	raiz=dicc_api["data"]
+	title=[]
+	for i in raiz:
+		tlista=i["title"]
+		title.append(tlista)
+		return template('results', title=title)
+
+debug(True)
+run(host='localhost', port=8080, reloader=True)
 
  
 run(host='localhost', port=8080, debug=True, reloader=True)
