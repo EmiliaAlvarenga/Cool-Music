@@ -27,12 +27,12 @@ def search_name():
 @post('/info')
 def nombre():
     global artist
-    artista = request.forms.get("artista")
-    respuesta = requests.get('http://api.deezer.com/search/album?q=%s'% artista)
-    datos=respuesta.text.encode('utf-8')
-    dicc_api=json.loads(datos)
-    datos=dicc_api
-    return template('results',artist=artista, datos=datos)
+    artist = request.forms.get("artista")
+    r = requests.get('http://api.deezer.com/search/album?q=%s'% artist)
+    encode_utf8=r.text.encode('utf-8')
+    dicc_api=json.loads(encode_utf8)
+    data=dicc_api
+    return template('results',artist=artist, data=data)
 
 debug(True)
 run(host='localhost', port=8080, reloader=True)
