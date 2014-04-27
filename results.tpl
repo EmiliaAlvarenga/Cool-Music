@@ -4,9 +4,9 @@
         <title>Cool-Music</title>
     </head>
     <body>
-	<h3>Album info</>
+	<h3>Album infoimation</>
 	%cont=1
-	%for i in datos["data"]:
+	%for i in data["data"]:
 	    <ul>
 	        <li>Artist {{ i['artist']['name'] }} </li>
 		<li>Album {{ i['title'] }}</li>
