@@ -1,0 +1,46 @@
+body {
+font-family: helvetica,sans-serif;
+text-align: center;
+margin: 0 auto;
+width: 800px;
+background: #191313;
+}
+
+h1 {
+text-align: center;
+color: #05DC45
+}
+
+h2 {
+text-align: center;
+color: #29EB07
+}
+
+
+a {
+margin: 1em 0; 
+display: block;
+color: #D6BA04;
+text-decoration: none;
+}
+
+#box {
+text-align: center;
+color: #EC68FA
+}
+
+#redirect{
+text-align: center;
+color: #14150B
+}
+
+#colorres{
+text-align: center;
+color: #07BDEB
+}
+
+
+
+
+
+
