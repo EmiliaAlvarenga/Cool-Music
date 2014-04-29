@@ -4,9 +4,9 @@
     <title>Cool-Music</title>
   </head>
   <body>
-	<h1>Musica sin limite</h1>
-	<ul>
-		<li><a href="artist">Search Name Artist</a></li>
+    <h1>Musica sin limite</h1>
+    <ul>
+      <li><a href="artist">Search Name Artist</a></li>
     </ul>
   </body>
 </html>
