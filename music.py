@@ -3,7 +3,7 @@
 
 import json
 import requests
-from bottle import route, get, post, run, template, debug, error, request
+from bottle import route, get, post, run, template, debug, error, request, static_file
 import bottle 
 
 
