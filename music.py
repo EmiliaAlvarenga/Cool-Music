@@ -11,7 +11,14 @@ import bottle
 @error(404)
 def error404(error):
     return 'Nada que mostrar aqui'
+    
+    
+#Ruta de la hoja de estilo
+@route('/css/:filename#.*#')
+def server_static(filename):
+    return static_file(filename, root='./css/')	
 
+    
 @route('/home')
 def search():
     return template('index')
