@@ -32,6 +32,8 @@ def nombre():
     data=dicc_api
     return template('results',artist=artist, data=data)
 
+
+
 debug(True)
 run(host='localhost', port=8080, reloader=True)
 
