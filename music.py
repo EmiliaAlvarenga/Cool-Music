@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+﻿#!/usr/bin/env python
 #coding:utf-8
 
 import json
@@ -6,6 +6,7 @@ import requests
 from bottle import route, get, post, run, template, debug, error, request, static_file
 import bottle 
 
+#
 
 #por si escribo mal una direccion
 @error(404)
