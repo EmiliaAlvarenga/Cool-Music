@@ -2,20 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Cool-Music</title>
-        <link rel="stylesheet" type="text/css" href="css/hojaestilo.css">
     </head>
     <body>
-	<h3>Album infoimation</>
-	%cont=1
-	%for i in data["data"]:
-	    <div id="colorres">
-		<ol>Artista {{ i['artist']['name'] }} </ol>
-		<ul>Album: {{ i['title'] }}</ul>
-		<img src="{{ i['cover'] }}"/>
-		<p><a href="{{ i['link'] }}"> Escuchar este album </a></p>
-	    </div>
-	%cont=cont+1	
-	%end	
-	<a href="/home">Inicio</a>	
+        <h3>Resultados de la búsqueda</h3>
+        %for i in data['data']:
+         <p>Artista {{i['artist']['name']}} </p>
+         <p>Album: {{i['title']}}</p>
+         <img src="{{i['cover']}}"/>
+         <p><a href="{{i['link']}}"> Escuchar este album </a></p>
+        %end
+        <a href="/artist">Realice otra búsqueda</a>
     </body>
 </html>
