@@ -4,10 +4,11 @@
         <title>Cool-Music</title>
 	      <link rel="stylesheet" type="text/css" href="css/hojaestilo.css">
     </head>
-   <div id="home">
-    <body>
-	      <h2>Encuentre los albumes de sus artistas favoritos</h1>
-	      <div><a id="simple" href="artist">Buscar por nombre de artista</a></div>
+       <div id="home">
+      <body>
+              <h2>Bienvenido a Cool-Music</h1>
+              <p>Esta es una página para la búsqueda de informacion de los albums de tus artistas favoritos.</p>
+              <div><a id="simple" href="artist">Buscar por nombre de artista</a>
+       </div>
     </body>
-   </div>
 </html>
