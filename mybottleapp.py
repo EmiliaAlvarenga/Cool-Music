@@ -9,7 +9,7 @@ import os
 
 @route('/css/:filename#.*#')
 def server_static(filename):
-    return static_file(filename, root='./static/css/')
+    return static_file(filename, root='./static')
 
 @error(404)
 def error404(error):
