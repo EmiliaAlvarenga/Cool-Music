@@ -1,30 +1,9 @@
-Bottle on OpenShift
+Cool-Music
 ===================
 
-This git repository helps you get up and running quickly w/ a Bottle installation
-on the Red Hat OpenShift PaaS.
-
-
-Running on OpenShift
+Es una aplicacion que permite listar los discos de tus artistas favoritos contenidos en la API de Deezer:
+http://developers.deezer.com/api
 ----------------------------
 
-Create an account at https://www.openshift.com/
-
-Create a python application
-
-    rhc app create bottle python-2.6
-
-Add this upstream bottle repo
-
-    cd bottle
-    git remote add upstream -m master git://github.com/openshift-quickstart/bottle-openshift-quickstart.git
-    git pull -s recursive -X theirs upstream master
-    
-Then push the repo upstream
-
-    git push
-
-That's it, you can now checkout your application at:
-
-    http://bottle-$yournamespace.rhcloud.com
+De momento basta con poner el nombre del artista para hacer la busqueda, en la respuesta de la busqueda tambien encontraras un link que te envia directamente para escuchar los temas contenidos en el disco seleccionado. 
 
