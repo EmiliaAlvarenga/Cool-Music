@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Cool-Music</title>
-	      <link rel="stylesheet" type="text/css" href="css/hojaestilo.css">
+	      <link rel="stylesheet" type="text/css" href="static/hojaestilo.css">
     </head>
        <div id="home">
       <body>
