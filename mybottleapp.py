@@ -7,7 +7,7 @@ from bottle import route, get, post, run, template, debug, error, request, stati
 import bottle
 import os
 
-@route('/css/:filename#.*#')
+@route('/static/<filename>')
 def server_static(filename):
     return static_file(filename, root='./static')
 
