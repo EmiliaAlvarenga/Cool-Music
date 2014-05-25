@@ -2,13 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Cool-Music</title>
-	    <link rel="stylesheet" type="text/css" href="static/hojaestilo.css">
+	<link rel="stylesheet" type="text/css" href="css/hojaestilo.css">
     </head>
-       <div id="home">
     <body>
-           <h2>Bienvenido a Cool-Music</h2>
-           <p>Esta es una página para la búsqueda de informacion de los albums de tus artistas favoritos.</p>
-           <div><a id="simple" href="artist">Buscar por nombre de artista</a></div>
-       </div>
+    <div id="encabezado">
+        <h1> Cool-Music </h1>
+    </div>
+	<h2>Encuentre los albumes de sus artistas favoritos</h2>
+    <div>
+        <a href="artist">Buscar por nombre de artista</a>
+    </div>
     </body>
 </html>
