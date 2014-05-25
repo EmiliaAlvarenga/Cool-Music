@@ -2,32 +2,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <title>Cool-Music</title>
-	    <link rel="stylesheet" type="text/css" href="css/hojaestilo.css">
+	<link rel="stylesheet" type="text/css" href="css/hojaestilo.css">
     </head>
     <body>
     <div id="contenedor"> 
-	    <h2>Resultados de la búsqueda</h2>
-	    %for i in data['data']:
-		    <div class="capsula">
-			    <table border="0" id="colorres" >
-			        <tr>
-					    <td>
-					        <p><img src="{{ i['cover'] }}" /></p>
-						    <td>
-					            <p>{{ i['artist']['name'] }} </p>
-					            <p>{{ i['title'] }}</p>
-					            <a href="{{ i['link'] }}"> Escuchar este album </a>
-						    </td>
-					    </td>
-					    <br>
-			       </tr>
-		           <br>
-			    </table>		
+        <h2>Resultados de la búsqueda</h2>
+        %for i in data['data']:
+            <div class="capsula">
+	    <table border="0" id="colorres" >
+	        <tr>
+	            <td>
+		        <p><img src="{{ i['cover'] }}" /></p>
+	                <td>
+	                    <p>{{ i['artist']['name'] }} </p>
+		            <p>{{ i['title'] }}</p>
+			    <a href="{{ i['link'] }}"> Escuchar este album </a>
+		        </td>
+		    </td>
+		    <br>
+	        </tr>
+	        <br>
+	    </table>		
             </div>
-	    %end
-	    <div class="redirect">
-	        <a href="/artist">Realice otra búsqueda</a> 
-	    </div>
+        %end
+	<div class="redirect">
+	    <a href="/artist">Realice otra búsqueda</a> 
+	</div>
     </div>
     </body>
 </html>
