@@ -23,29 +23,31 @@ def search():
 def search_name():
     return template('artist')
 
+		
 @post('/info')
 def nombre():
-    global artist
-    artist = request.forms.get('artista')
-    r = requests.get('http://api.deezer.com/search/album?q=%s'% artist)
-    dicc_api=json.loads(r.text)
-    data=dicc_api
-    return template('results', data=data)
+	global artist
+	artist = request.forms.get("artista")
+	r = requests.get('http://api.deezer.com/search/album', params={'q':'%s'% artist})
+	dicc_api=json.loads(r.text)
+	return template('results', data=dicc_api)
 
 
 # This must be added in order to do correct path lookups for the views
 
-ON_OPENSHIFT = False
-if os.environ.has_key('OPENSHIFT_REPO_DIR'):
-    ON_OPENSHIFT = True
+#ON_OPENSHIFT = False
+#if os.environ.has_key('OPENSHIFT_REPO_DIR'):
+#    ON_OPENSHIFT = True
 
-if ON_OPENSHIFT:
-    TEMPLATE_PATH.append(os.path.join(os.environ['OPENSHIFT_HOMEDIR'],
-                                      'app-root/repo/wsgi/views/'))
+#if ON_OPENSHIFT:
+#    TEMPLATE_PATH.append(os.path.join(os.environ['OPENSHIFT_HOMEDIR'],
+#                                      'app-root/repo/wsgi/views/'))
 
-    application=default_app()
-else:
-    run(host='localhost', port=8080)
+#    application=default_app()
+#else:
+
+debug='TRUE'
+run(host='localhost', port=8080)
 
 
 
