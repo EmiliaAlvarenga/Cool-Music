@@ -3,7 +3,7 @@ body {
    text-align: center;
    margin: 0 auto;
    width: 800px;
-   background: #FAFAFA;
+   background: #F2F2F2;
 }
 
 #contenedor {
@@ -105,16 +105,15 @@ td,p {
 
 .redirect { 
    float:left; 
-   width:100px; 
+   width:120px; 
    height:50px; 
    margin: 10px; 
    padding:5px; 
-   background-color:#F2F2F2; 
+   background-color:#FFFFFF; 
    border-right: #a5a7aa solid 2px; 
    border-bottom: #a5a7aa solid 2px; 
    text-align:center; 
 }
-
 
 
 
