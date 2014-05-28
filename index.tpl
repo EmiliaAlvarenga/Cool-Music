@@ -5,12 +5,12 @@
 	<link rel="stylesheet" type="text/css" href="static/hojaestilo.css">
     </head>
     <body>
-    <div id="encabezado">
-        <h1> Cool-Music </h1>
-    </div>
-	<h2>Encuentre los albumes de sus artistas favoritos</h2>
-    <div>
-        <a href="artist">Buscar por nombre de artista</a>
-    </div>
+        <div id="encabezado">
+            <h1> Cool-Music </h1>
+        </div>
+ 	<h2>Encuentre los albumes de sus artistas favoritos</h2>
+        <div>
+            <a href="artist">Buscar por nombre de artista</a>
+        </div>
     </body>
 </html>
