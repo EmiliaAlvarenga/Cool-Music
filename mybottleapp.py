@@ -26,11 +26,11 @@ def search_name():
 		
 @post('/info')
 def nombre():
-	global artist
-	artist = request.forms.get("artista")
-	r = requests.get('http://api.deezer.com/search/album', params={'q':'%s'% artist})
-	dicc_api=json.loads(r.text)
-	return template('results', data=dicc_api)
+    global artist
+    artist = request.forms.get("artista")
+    r = requests.get('http://api.deezer.com/search/album', params={'q':'%s'% artist})
+    dicc_api=json.loads(r.text)
+    return template('results', data=dicc_api)
 
 
 # This must be added in order to do correct path lookups for the views
